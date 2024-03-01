@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Kamatszamitas
 {
     public partial class Form1 : Form
@@ -5,6 +7,35 @@ namespace Kamatszamitas
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            decimal hitelÖsszeg = decimal.Parse(tbHitelÖsszege.Text);
+            decimal haviKamat = decimal.Parse(tbHaviKamat.Text);
+            decimal haviTörlesztõ = decimal.Parse(cbHaviTörlesztõ.Text);
+
+            decimal hátralék = hitelÖsszeg;
+            decimal befizetés = 0;
+
+            List<Sor> sorok = new List<Sor>();
+
+            int hónap = 1;
+            while (hátralék > 0)
+            {
+                hátralék += haviKamat * (hátralék / 100m);
+                hátralék -= haviTörlesztõ;
+                befizetés += haviTörlesztõ;
+                hónap++;
+
+                Sor újSor = new Sor();
+                újSor.Hátralék = Math.Round(hátralék);
+                újSor.Hónap = hónap;
+
+                sorok.Add(újSor);
+            }
+
+            dataGridView1.DataSource = sorok;
         }
     }
 }
