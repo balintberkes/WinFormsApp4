@@ -7,7 +7,7 @@ namespace Sakktabla
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load_1(object sender, EventArgs e)
         {
             for (int j = 0; j < 10; j++)
             {
@@ -20,14 +20,23 @@ namespace Sakktabla
                     g.Height = 40;
                     g.Text = (i * j).ToString();
 
-                    if (i % 2 == 0)
+                    if (i % 2 == 0 & j % 2 == 0)
                     {
                         g.Visible = true;
+                       
                     }
 
                     else
-                    { 
-                        g.Visible=false;
+                    {
+                        if (i % 2 == 1 & j % 2 == 1)
+                        {
+                            g.Visible = true;
+                        }
+                        else
+                        {
+                            g.Visible = false;
+                        }
+                        
                     }
 
                     Controls.Add(g);

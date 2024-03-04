@@ -13,17 +13,17 @@ namespace gomb
             {
                 for (int o = 0; o < 10; o++)
                 {
-                    Button button = new Button();
-                    button.Height = 20;
-                    button.Width = 20;
-                    button.Left = o * 20;
-                    button.Top = s * 20;
+                    VillogoGomb button = new VillogoGomb();
+                    button.Height = 40;
+                    button.Width = 40;
+                    button.Left = o * 40;
+                    button.Top = s * 40;
+
+                    button.Text = (s*o).ToString();
 
                     Controls.Add(button);
                 }
             }
-
-
         }
     }
 }
