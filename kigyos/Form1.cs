@@ -41,7 +41,7 @@ namespace kigyos
             ke.Left = fej_x;
             Controls.Add(ke);
 
-            
+
 
             if (Controls.Count > hossz) Controls.RemoveAt(0);
             if (lépésszám % 5 == 0) hossz++;
@@ -74,7 +74,7 @@ namespace kigyos
             }
         }
 
-        
+
 
 
 
