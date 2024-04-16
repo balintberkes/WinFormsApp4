@@ -1,5 +1,6 @@
 using CsvHelper;
 using System.ComponentModel;
+using System.Diagnostics.PerformanceData;
 using System.Globalization;
 
 namespace futoverseny
@@ -88,6 +89,15 @@ namespace futoverseny
             {
                 listVersenyzok.Add(formAddItem.UjVersenyzo);
             }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            //if (classVersenyzokBindingSource == null) return;  
+            
+            FormEdit formEdit = new FormEdit();
+            formEdit.UjVersenyzo = classVersenyzokBindingSource.Current as ClassVersenyzok;
+            formEdit.Show();
         }
     }
 }

@@ -40,6 +40,7 @@
             buttonSave = new Button();
             buttonNewItem = new Button();
             buttonDelete = new Button();
+            buttonEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)classVersenyzokBindingSource).BeginInit();
             SuspendLayout();
@@ -140,11 +141,22 @@
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
+            // buttonEdit
+            // 
+            buttonEdit.Location = new Point(859, 249);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(150, 46);
+            buttonEdit.TabIndex = 5;
+            buttonEdit.Text = "Szerkesztés";
+            buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1472, 865);
+            Controls.Add(buttonEdit);
             Controls.Add(buttonDelete);
             Controls.Add(buttonNewItem);
             Controls.Add(buttonSave);
@@ -170,5 +182,6 @@
         private DataGridViewTextBoxColumn eredmenyPercDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn kategoriaDataGridViewTextBoxColumn;
         private BindingSource classVersenyzokBindingSource;
+        private Button buttonEdit;
     }
 }
