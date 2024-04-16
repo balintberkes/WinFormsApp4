@@ -28,12 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            dataGridView1 = new DataGridView();
+            buttonLoad = new Button();
+            buttonSave = new Button();
+            buttonNewItem = new Button();
+            buttonDelete = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(85, 320);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.Size = new Size(1325, 351);
+            dataGridView1.TabIndex = 0;
+            // 
+            // buttonLoad
+            // 
+            buttonLoad.Location = new Point(1260, 249);
+            buttonLoad.Name = "buttonLoad";
+            buttonLoad.Size = new Size(150, 46);
+            buttonLoad.TabIndex = 1;
+            buttonLoad.Text = "Betöltés";
+            buttonLoad.UseVisualStyleBackColor = true;
+            // 
+            // buttonSave
+            // 
+            buttonSave.Location = new Point(1075, 249);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(150, 46);
+            buttonSave.TabIndex = 2;
+            buttonSave.Text = "Mentés";
+            buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // buttonNewItem
+            // 
+            buttonNewItem.Location = new Point(1260, 704);
+            buttonNewItem.Name = "buttonNewItem";
+            buttonNewItem.Size = new Size(150, 46);
+            buttonNewItem.TabIndex = 3;
+            buttonNewItem.Text = "Új Sor";
+            buttonNewItem.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Location = new Point(1075, 704);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(150, 46);
+            buttonDelete.TabIndex = 4;
+            buttonDelete.Text = "Törlés";
+            buttonDelete.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1472, 865);
+            Controls.Add(buttonDelete);
+            Controls.Add(buttonNewItem);
+            Controls.Add(buttonSave);
+            Controls.Add(buttonLoad);
+            Controls.Add(dataGridView1);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private Button buttonLoad;
+        private Button buttonSave;
+        private Button buttonNewItem;
+        private Button buttonDelete;
     }
 }
