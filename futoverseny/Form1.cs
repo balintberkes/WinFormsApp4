@@ -93,7 +93,7 @@ namespace futoverseny
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            //if (classVersenyzokBindingSource == null) return;  
+            if (classVersenyzokBindingSource == null) return;  
             
             FormEdit formEdit = new FormEdit();
             formEdit.UjVersenyzo = classVersenyzokBindingSource.Current as ClassVersenyzok;
